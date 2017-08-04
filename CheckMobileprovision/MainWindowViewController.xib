@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowViewController">
+            <connections>
+                <outlet property="entitlementsInfoView" destination="kQR-Oe-5K1" id="vfU-pc-bg3"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hye-nb-yxU">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="230"/>
+                        <clipView key="contentView" id="Pr1-HW-bXb">
+                            <rect key="frame" x="1" y="1" width="463" height="228"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="kQR-Oe-5K1" customClass="NoDragTextView">
+                                    <rect key="frame" x="0.0" y="0.0" width="463" height="228"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="463" height="228"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="olB-Gx-dTX">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gOQ-hV-MvA">
+                            <rect key="frame" x="464" y="1" width="15" height="228"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT3-vu-GHk">
+                        <rect key="frame" x="18" y="240" width="464" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="xwU-CS-l9j"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drag and drop a mobileprovision file" id="ljk-y1-r3D">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hye-nb-yxU" firstAttribute="top" secondItem="AT3-vu-GHk" secondAttribute="bottom" constant="10" id="BIz-9w-5yy"/>
+                    <constraint firstAttribute="trailing" secondItem="Hye-nb-yxU" secondAttribute="trailing" id="DvD-b8-rdf"/>
+                    <constraint firstItem="AT3-vu-GHk" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="10" id="JWf-eq-VPr"/>
+                    <constraint firstItem="Hye-nb-yxU" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="Jxl-F5-1PO"/>
+                    <constraint firstItem="Hye-nb-yxU" firstAttribute="top" secondItem="AT3-vu-GHk" secondAttribute="bottom" constant="10" id="UC8-om-i2I"/>
+                    <constraint firstAttribute="trailing" secondItem="AT3-vu-GHk" secondAttribute="trailing" id="eaW-JL-Isw"/>
+                    <constraint firstAttribute="bottom" secondItem="Hye-nb-yxU" secondAttribute="bottom" id="fvL-hj-WdU"/>
+                    <constraint firstItem="AT3-vu-GHk" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="ugn-x4-L5j"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="167"/>
+        </window>
+    </objects>
+</document>
